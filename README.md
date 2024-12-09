@@ -1,3 +1,17 @@
+# 官网
+
+页面结构：顶部，底部
+
+导航：首页 产品信息 最新资讯 加入我们
+
+路由拆分
+
+layout拆分
+
+首页滚动
+
+
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
