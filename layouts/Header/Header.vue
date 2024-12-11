@@ -48,12 +48,33 @@
 .tabs-nav {
   color: #ffffff;
   .tab-item {
+    position: relative;
     & + .tab-item {
-      margin-left: 24px;
+      margin-left: 48px;
     }
     .nav-link {
       display: block;
-      padding: 12px 24px;
+      padding: 6px 2px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 1px;
+      background-image: linear-gradient(
+        to top,
+        #ffffff,
+        #ffffff 75%,
+        transparent 75%
+      );
+      transition: 0.6s width;
+    }
+    &:hover::after {
+      width: 100%;
     }
   }
 }

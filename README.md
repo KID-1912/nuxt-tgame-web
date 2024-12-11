@@ -11,7 +11,11 @@ https://game.qq.com/web202406/#/pc/Latest-news
 
 layout拆分 实现header
 
-尝试SSG看效果
+尝试SSG看效果:
+
+npm run generate 顺利生成SSG静态资源
+
+npm run build 顺利构建生产代码
 
 首页整屏滚动
 
