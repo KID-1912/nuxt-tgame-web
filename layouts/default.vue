@@ -1,11 +1,11 @@
 <script setup>
-import Header from "./components/Header.vue";
+import Header from "./Header/Header.vue";
 </script>
 
 <template>
   <div class="default-layouts">
-    这里是可重用布局
     <Header></Header>
+    这里是可重用布局
     <slot></slot>
   </div>
 </template>
@@ -14,5 +14,7 @@ import Header from "./components/Header.vue";
 .default-layouts {
   position: relative;
   height: 100vh;
+  padding-top: 74px;
+  background-color: #85d297;
 }
 </style>

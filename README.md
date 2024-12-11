@@ -3,15 +3,17 @@
 参考页：https://www.dodjoy.com/?slide=5
 https://game.qq.com/web202406/#/pc/Latest-news
 
-页面结构：顶部，底部
+页面结构：顶部，底部 √
 
 导航：首页 产品信息 最新资讯 加入我们
 
 路由拆分(pages结构)
 
-layout拆分
+layout拆分 实现header
 
-首页滚动
+尝试SSG看效果
+
+首页整屏滚动
 
 ## 页面路由
 
@@ -25,13 +27,35 @@ index.vue匹配根路径，pages/index.vue即匹配根路径
 
 专有NuxtPage组件替代router-view
 
+NuxtLink替代router-link(支持a标签且自动转换路径)
+
 ## layouts
 
 ## 其他
 
 nuxt3默认基于vite，也支持webpack5
 
-vite的node-sass默认legacy模式调整为modern模式
+vite的node-sass默认legacy模式调整为modern-compiler模式
+
+通过nuxt module支持windicss， `npm i nuxt-windicss -D`
+
+```
+import { defineNuxtConfig } from 'nuxt/config'
+
+export default defineNuxtConfig({
+  modules: [
+    'nuxt-windicss',
+  ],
+})
+```
+注：其它所有项目模板windicss增加extract,eslint增加exclude,ts的exclude
+
+## 思考
+
+vercle基于serverless 云服务(云函数)方式模拟实现基于nodejs服务的ssr
+
+单静态资源单域名托管服务（直接托管），思考短域名去映射资源路径：nignx所有短域名/二级域名整个直接映射到资源目录下
+
 
 # Nuxt Minimal Starter
 

@@ -15,6 +15,8 @@
     "vue-router": "latest"
   },
   "devDependencies": {
-    "install": "^0.13.0"
+    "install": "^0.13.0",
+    "nuxt-windicss": "^3.0.1",
+    "sass-embedded": "^1.82.0"
   }
 }
