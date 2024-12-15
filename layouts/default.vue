@@ -1,20 +1,22 @@
 <script setup>
 import Header from "./Header/Header.vue";
+import Footer from "./Footer/Footer.vue";
 </script>
 
 <template>
-  <div class="default-layouts">
-    <Header></Header>
-    这里是可重用布局
+  <div class="default-layout">
+    <slot name="header">
+      <Header></Header>
+    </slot>
     <slot></slot>
+    <slot name="footer">
+      <Footer></Footer>
+    </slot>
   </div>
 </template>
 
 <style lang="scss" scoped>
-.default-layouts {
-  position: relative;
+.default-layout {
   height: 100vh;
-  padding-top: 74px;
-  background-color: #85d297;
 }
 </style>

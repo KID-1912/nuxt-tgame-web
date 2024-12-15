@@ -26,12 +26,13 @@
 
 <style lang="scss" scoped>
 .header {
-  position: absolute;
+  position: fixed;
   padding: 0 120px;
   top: 0;
   left: 0;
   width: 100%;
   height: 74px;
+  z-index: 99;
 }
 
 .logo {
@@ -46,7 +47,6 @@
 }
 
 .tabs-nav {
-  color: #ffffff;
   .tab-item {
     position: relative;
     & + .tab-item {
@@ -55,6 +55,7 @@
     .nav-link {
       display: block;
       padding: 6px 2px;
+      color: #fff;
     }
     &::after {
       position: absolute;

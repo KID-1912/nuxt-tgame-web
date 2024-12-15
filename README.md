@@ -2,22 +2,38 @@
 
 参考页：https://www.dodjoy.com/?slide=5
 https://game.qq.com/web202406/#/pc/Latest-news
+https://www.honorofkings.com/global-en/
+https://ieg.tencent.com/2023/index.html#games
 
-页面结构：顶部，底部 √
+https://www.deviantart.com/sineerie/gallery/62273611/renders
 
-导航：首页 产品信息 最新资讯 加入我们
+页面结构：顶部√，底部
 
-路由拆分(pages结构)
+导航：首页 产品信息 最新资讯 加入我们 √
 
-layout拆分 实现header
+路由拆分(pages结构) √
 
-尝试SSG看效果:
+layout拆分 实现header √
 
-npm run generate 顺利生成SSG静态资源
+尝试SSG看效果 √
 
-npm run build 顺利构建生产代码
+npm run generate 顺利生成SSG静态资源 √
 
-首页整屏滚动
+npm run build 顺利构建生产代码 √
+
+首页整屏滚动，底部footer留最后 √
+
+swiper11使用与文档与API查询，swiper9文档
+
+完成 video wz lol pubg √
+
+产品信息 √ 最新资讯
+
+header背景 nav选中
+
+swiper回到重置
+
+prettier
 
 ## 页面路由
 
