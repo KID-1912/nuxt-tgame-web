@@ -1,4 +1,8 @@
 <script lang="ts" setup>
+const props = defineProps({
+  active: { type: Boolean, default: false },
+});
+
 // banner 切换
 const bannerActivatedIndex = ref<number>(1);
 const bannerMaxIndex: number = 5;
@@ -12,13 +16,25 @@ const handleNextBanner = () => {
       return;
     }
     bannerActivatedIndex.value += 1;
-  }, 3600);
+  }, 2400);
 };
-onMounted(handleNextBanner);
+
+watch(
+  () => props.active,
+  () => {
+    if (props.active) {
+      handleNextBanner();
+    } else {
+      bannerActivatedIndex.value = 1;
+      nextBannerTimer && clearTimeout(nextBannerTimer);
+      nextBannerTimer = undefined;
+    }
+  }
+);
 </script>
 
 <template>
-  <div class="full-page">
+  <div class="full-page" :class="{ animate: props.active }">
     <div class="role-banner">
       <transition-group name="fade" @after-leave="handleNextBanner">
         <div

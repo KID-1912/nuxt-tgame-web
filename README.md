@@ -7,7 +7,7 @@ https://ieg.tencent.com/2023/index.html#games
 
 https://www.deviantart.com/sineerie/gallery/62273611/renders
 
-页面结构：顶部√，底部
+页面结构：顶部√，底部 √
 
 导航：首页 产品信息 最新资讯 加入我们 √
 
@@ -27,13 +27,23 @@ swiper11使用与文档与API查询，swiper9文档
 
 完成 video wz lol pubg √
 
-产品信息 √ 最新资讯
+产品信息 √ 最新资讯 √
 
-header背景 nav选中
+header背景 nav选中 √
 
-swiper回到重置
+swiper回到重置 √
+
+按钮跳转
+
+首页视频
+
+动态 header
+
+ts类型问题
 
 prettier
+
+生成问题
 
 ## 页面路由
 
@@ -69,6 +79,10 @@ export default defineNuxtConfig({
 })
 ```
 注：其它所有项目模板windicss增加extract,eslint增加exclude,ts的exclude
+
+nuxt generate 生成页面，预渲染静态页
+
+注意components
 
 ## 思考
 

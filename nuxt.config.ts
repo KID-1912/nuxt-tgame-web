@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-windicss"
   ],
+  // ignore: [
+  //   'pages/_components/**/*',
+  // ],
   vite: {
     css: {
       preprocessorOptions: {

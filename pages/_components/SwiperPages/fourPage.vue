@@ -1,7 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const props = defineProps({
+  active: { type: Boolean, default: false },
+});
+</script>
 
 <template>
-  <div class="full-page">
+  <div class="full-page" :class="{ animate: props.active }">
     <div class="role-banner">
       <div class="pic-role"></div>
     </div>

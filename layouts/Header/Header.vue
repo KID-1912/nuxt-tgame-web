@@ -18,7 +18,7 @@
         <NuxtLink class="nav-link" to="/news">最新资讯</NuxtLink>
       </div>
       <div class="tab-item">
-        <NuxtLink class="nav-link" to="/about-us">加入我们</NuxtLink>
+        <a class="nav-link">加入我们</a>
       </div>
     </div>
   </div>
@@ -26,12 +26,16 @@
 
 <style lang="scss" scoped>
 .header {
+  --header-text-color: #ffffff;
+  --header-bg-color: transparent;
   position: fixed;
   padding: 0 120px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 74px;
+  height: 64px;
+  color: var(--header-text-color);
+  background-color: var(--header-bg-color);
   z-index: 99;
 }
 
@@ -41,8 +45,8 @@
   text-indent: -999px;
   .logo-link {
     display: block;
-    width: 149px;
-    height: 74px;
+    width: 128px;
+    height: 64px;
   }
 }
 
@@ -55,27 +59,29 @@
     .nav-link {
       display: block;
       padding: 6px 2px;
-      color: #fff;
-    }
-    &::after {
-      position: absolute;
-      content: "";
-      width: 0;
-      height: 2px;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 1px;
-      background-image: linear-gradient(
-        to top,
-        #ffffff,
-        #ffffff 75%,
-        transparent 75%
-      );
-      transition: 0.6s width;
-    }
-    &:hover::after {
-      width: 100%;
+      &.router-link-active {
+        font-weight: bold;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 1px;
+        background-image: linear-gradient(
+          to top,
+          currentColor,
+          currentColor 80%,
+          transparent 80%
+        );
+        transition: 0.6s width;
+      }
+      &:hover::after {
+        width: 100%;
+      }
     }
   }
 }

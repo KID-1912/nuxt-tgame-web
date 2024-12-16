@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@types/swiper": "^6.0.0",
+    "dayjs": "^1.11.13",
     "nuxt": "^3.14.1592",
     "swiper": "^11.1.15",
     "vue": "latest",

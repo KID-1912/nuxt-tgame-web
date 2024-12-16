@@ -29,29 +29,29 @@ const gameList: gameItem[] = gameJSON;
 
 <style lang="scss" scoped>
 .wrap {
-  padding: 74px 0;
+  padding: 64px 0;
   background-image: linear-gradient(0deg, #0e0e0e, #292875);
 }
 .game-list {
   width: 960px;
   margin: 0 auto;
-  .game-box {
-    width: 220px;
-    margin-top: 20px;
-    transition: 0.3s transform ease;
-    &:hover {
-      transform: translateY(-4%);
-    }
-    .title {
-      color: #ffffff;
-      font-size: 14px;
-      line-height: 2;
-      font-weight: bold;
-    }
-    .desc {
-      color: hsla(0, 0%, 100%, 0.5);
-      font-size: 12px;
-    }
+}
+.game-box {
+  width: 220px;
+  margin-top: 20px;
+  transition: 0.3s transform ease;
+  &:hover {
+    transform: translateY(-4%);
+  }
+  .title {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 2;
+    font-weight: bold;
+  }
+  .desc {
+    color: hsla(0, 0%, 100%, 0.5);
+    font-size: 12px;
   }
 }
 </style>
