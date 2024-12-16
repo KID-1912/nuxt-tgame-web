@@ -18,7 +18,12 @@
         <NuxtLink class="nav-link" to="/news">最新资讯</NuxtLink>
       </div>
       <div class="tab-item">
-        <a class="nav-link">加入我们</a>
+        <a
+          class="nav-link"
+          href="https://game.qq.com/web202406/#/pc/Join-us"
+          target="_blank"
+          >加入我们</a
+        >
       </div>
     </div>
   </div>

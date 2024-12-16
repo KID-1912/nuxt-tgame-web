@@ -2,12 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: [
-    "nuxt-windicss"
-  ],
-  // ignore: [
-  //   'pages/_components/**/*',
-  // ],
+  modules: ["nuxt-windicss"],
+  pages: false,
+  plugins: ["~/plugins/router.ts"],
   vite: {
     css: {
       preprocessorOptions: {

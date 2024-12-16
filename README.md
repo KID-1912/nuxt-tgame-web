@@ -33,15 +33,7 @@ header背景 nav选中 √
 
 swiper回到重置 √
 
-按钮跳转
-
-首页视频
-
-动态 header
-
-ts类型问题
-
-prettier
+header设置 √
 
 生成问题
 
