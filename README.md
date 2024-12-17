@@ -35,7 +35,13 @@ swiper回到重置 √
 
 header设置 √
 
-生成问题
+生成问题 中文戳与自定义路由 √：
+
+自定义路由下pages所有都会被生成路由,router.options.ts覆写,
+
+generate 生成：最容易报错的步骤，注意根目录必须存在index.vue
+
+部署与笔记
 
 ## 页面路由
 
@@ -74,7 +80,7 @@ export default defineNuxtConfig({
 
 nuxt generate 生成页面，预渲染静态页
 
-注意components
+注意components，自定义路由导致所有definePageMeta等失效
 
 ## 思考
 

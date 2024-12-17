@@ -26,11 +26,11 @@ const api_params = {
   page: 1,
   com_tag_id: 134445,
 };
-const { data } = await useFetch<NewsResponseData>(api_url, {
-  query: api_params,
-});
-newsList = data.value?.data.items || [];
-console.log("newsList", newsList.length);
+// const { data } = await useFetch<NewsResponseData>(api_url, {
+//   query: api_params,
+// });
+// newsList = data.value?.data.items || [];
+// console.log("newsList", newsList.length);
 </script>
 
 <template>

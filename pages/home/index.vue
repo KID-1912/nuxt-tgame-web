@@ -1,17 +1,13 @@
 <script lang="ts" setup>
 import Header from "@/layouts/Header/Header.vue";
 import Footer from "@/layouts/Footer/Footer.vue";
-import { swiperPageComponents } from "./components/SwiperPages/index.ts";
+import { swiperPageComponents } from "./components/SwiperPages/index";
 import {
   Swiper,
   SwiperSlide,
   modules as swiperModules,
 } from "@/lib/vue-swiper";
 import type { Swiper as SwiperClass, SwiperOptions } from "swiper/types";
-
-definePageMeta({
-  layout: false, // 关闭default布局，自定义布局
-});
 
 // swiper
 const swiperOptions: SwiperOptions = {
@@ -32,16 +28,15 @@ const onSlideChange = (swiper: SwiperClass) => {
     <template #header>
       <Header :class="`active-${activePageIndex}`"></Header>
     </template>
-    <div class="wrap">
-      <swiper v-bind="swiperOptions" @slideChange="onSlideChange">
-        <swiper-slide
-          v-for="(page, index) in swiperPageComponents"
-          #default="{ isActive }"
-        >
-          <component :is="page" :active="isActive" :key="index"></component>
-        </swiper-slide>
-      </swiper>
-    </div>
+    <swiper v-bind="swiperOptions" @slideChange="onSlideChange">
+      <swiper-slide
+        v-for="(page, index) in swiperPageComponents"
+        :key="index"
+        #default="{ isActive }"
+      >
+        <component :is="page" :active="isActive"></component>
+      </swiper-slide>
+    </swiper>
     <template #footer>
       <Footer></Footer>
     </template>
@@ -51,7 +46,7 @@ const onSlideChange = (swiper: SwiperClass) => {
 <style lang="scss" scoped>
 .swiper {
   padding-top: 62px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 }
 
