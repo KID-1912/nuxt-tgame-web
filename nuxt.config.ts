@@ -1,5 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import type { NuxtPage } from '@nuxt/schema'
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -14,14 +13,4 @@ export default defineNuxtConfig({
       },
     },
   },
-  // generate: {
-  //   // exclude: ["/home"],
-  //   routes: ["/news", "/product"],
-  // },
-  // nitro: {
-  //   prerender: {
-  //     // ignore: ["/home"]
-  //     failOnError: false,
-  //   },
-  // },
 });

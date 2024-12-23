@@ -13,24 +13,27 @@ type NewsResponseData = {
 };
 
 // 资讯列表
-let newsList: News[];
+let newsList: News[] = [];
 const api_url: string = "https://apps.game.qq.com/cmc/common_list";
 const api_params = {
   com_biz: 191,
   com_type: 1,
   source: "gameqq",
   sortby: "com_idx_time",
-  sign: "a52cab3b2bbf13d7e2d659b2e3c6b16f",
-  t: 1734332929,
+  sign: "2155aa37981020f90e717be4dcf731d6",
+  t: 1734867706,
   pagesize: 18,
   page: 1,
   com_tag_id: 134445,
 };
-// const { data } = await useFetch<NewsResponseData>(api_url, {
-//   query: api_params,
-// });
-// newsList = data.value?.data.items || [];
-// console.log("newsList", newsList.length);
+try {
+  const { data } = await useFetch<NewsResponseData>(api_url, {
+    query: api_params,
+  });
+  newsList = data.value?.data.items || [];
+} catch (error) {
+  console.warn(error);
+}
 </script>
 
 <template>
