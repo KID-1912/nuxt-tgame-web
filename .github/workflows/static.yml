@@ -30,7 +30,7 @@ jobs:
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run generate
+        run: BASE_URL=/nuxt-tgame-web/ npm run generate
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
