@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt-tgame-web",
   "private": true,
   "type": "module",
   "scripts": {
